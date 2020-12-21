@@ -1,4 +1,4 @@
-FROM lzzy12/mega-sdk-python:latest
+FROM theaccounter/megasdklatest:latest
 
 WORKDIR /usr/src/app
 RUN chmod 777 /usr/src/app
