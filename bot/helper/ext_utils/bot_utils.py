@@ -92,7 +92,7 @@ def get_readable_message():
     with download_dict_lock:
         msg = ""
         for download in list(download_dict.values()):
-            msg += f"<b>FileName :</b> <i>{download.name()}</i> \n\n<b>Status : </b> "
+            msg += f"<b>FileName :</b> <i>{download.name()}</i> \n<b>Status : </b> "
             msg += download.status()
             if download.status() != MirrorStatus.STATUS_ARCHIVING and download.status() != MirrorStatus.STATUS_EXTRACTING:
                 msg += f"\n<code>{get_progress_bar_string(download)} {download.progress()}</code>" \
